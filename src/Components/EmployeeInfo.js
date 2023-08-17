@@ -2,7 +2,7 @@ import { getIn, useFormik } from 'formik';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveInfo } from '../features/info/infoSlice';
-import { nextStep, prevSteps } from '../features/stepper/stepperSclice';
+import { nextStep, prevStep } from '../features/stepper/stepperSclice';
 import * as msg from '../utils/validationMessages';
 import * as Yup from 'yup';
 import '../css/reset.css';
@@ -211,7 +211,7 @@ const EmployeeInfo = () => {
 					<Button
 						color='inherit'
 						// previous step here
-						onClick={() => dispatch(prevSteps())}
+						onClick={() => dispatch(prevStep())}
 						sx={{ mr: 1 }}
 					>
 						Back

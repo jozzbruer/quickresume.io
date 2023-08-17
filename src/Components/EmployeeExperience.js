@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as msg from '../utils/validationMessages';
 import * as Yup from 'yup';
 import { saveWork } from '../features/work/workSlice';
-import { nextStep, prevSteps } from '../features/stepper/stepperSclice';
+import { nextStep, prevStep } from '../features/stepper/stepperSclice';
 import { Box, Button } from '@mui/material';
 import ExperienceForm from './ExperienceForm';
 import CloseIcon from '@mui/icons-material/Close';
@@ -137,7 +137,7 @@ const EmployeeExperience = () => {
 				<Button
 					color='inherit'
 					// previous step code here
-					onClick={() => dispatch(prevSteps())}
+					onClick={() => dispatch(prevStep())}
 					sx={{ mr: 1 }}
 				>
 					Back

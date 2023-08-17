@@ -37,29 +37,29 @@ const initialState = {
 const stepperSlice = createSlice({
 	name: 'stepper',
 	initialState,
-	reducer: {
+	reducers: {
+		// actions code here
 		nextStep: (state) => {
 			if (state.activeStep < state.steps.length - 1) {
 				state.prevSteps = [...state.prevSteps, state.activeStep];
-				state.activeStep = state.activeStep + 1;
+				state.activeStep += 1;
 			}
 		},
-		prevSteps: (state) => {
+		prevStep: (state) => {
 			if (
 				state.activeStep > 0 &&
 				state.prevSteps.includes(state.activeStep - 1)
 			) {
-				state.activeStep = state.activeStep - 1;
+				state.activeStep -= 1;
 			}
 		},
-
 		jumpToStep: (state, { payload }) => {
-			if (state.activeStep.includes(payload)) {
+			if (state.prevSteps.includes(payload)) {
 				state.activeStep = payload;
 			}
 		},
 	},
 });
 
-export const { nextStep, prevSteps, jumpToStep } = stepperSlice.actions;
+export const { nextStep, prevStep, jumpToStep } = stepperSlice.actions;
 export default stepperSlice.reducer;

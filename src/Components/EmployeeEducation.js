@@ -1,5 +1,5 @@
 import React from 'react';
-import { nextStep, prevSteps } from '../features/stepper/stepperSclice';
+import { nextStep, prevStep } from '../features/stepper/stepperSclice';
 import { saveEducation } from '../features/education/educationSlice';
 import * as msg from '../utils/validationMessages';
 import * as Yup from 'yup';
@@ -212,7 +212,7 @@ const EmployeeEducation = () => {
 				<Button
 					color='inherit'
 					// previous step here
-					onClick={() => dispatch(prevSteps())}
+					onClick={() => dispatch(prevStep())}
 					sx={{ mr: 1 }}
 				>
 					Back
