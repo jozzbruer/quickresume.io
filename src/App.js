@@ -4,6 +4,8 @@ import { Container, Grid } from '@mui/material';
 import MultiStepper from './Components/MultiStepper';
 import ShowTemplate from './Components/ShowTemplate';
 import EmployeeInfo from './Components/EmployeeInfo';
+import EmployeeExperience from './Components/EmployeeExperience';
+import EmployeeEducation from './Components/EmployeeEducation';
 
 const App = () => {
 	const { activeStep } = useSelector((store) => store.stepper);
@@ -11,6 +13,10 @@ const App = () => {
 		switch (activeStep) {
 			case 0:
 				return <EmployeeInfo />;
+			case 1:
+				return <EmployeeExperience />;
+			case 2:
+				return <EmployeeEducation />;
 			default:
 				break;
 		}

@@ -1,18 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import infoReducer from "./features/info/infoSlice";
-// import workReducer from "./features/work/workSlice";
-// import educationReducer from "./features/education/educationSlice";
-// import skillsReducer from "./features/skills/skillsSlice";
-// import interestsReducer from "./features/interests/interestsSlice";
-
 import stepperSclice from './features/stepper/stepperSclice';
 import infoSlice from './features/info/infoSlice';
+import workSlice from './features/work/workSlice';
+import educationSlice from './features/education/educationSlice';
 
 export const store = configureStore({
 	reducer: {
 		info: infoSlice,
-		// work: workReducer,
-		// education: educationReducer,
+		work: workSlice,
+		education: educationSlice,
 		// skills: skillsReducer,
 		// interests: interestsReducer,
 		stepper: stepperSclice,
