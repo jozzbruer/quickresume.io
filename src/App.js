@@ -2,21 +2,15 @@ import { useSelector } from 'react-redux';
 import './App.css';
 import { Container, Grid } from '@mui/material';
 import MultiStepper from './Components/MultiStepper';
+import ShowTemplate from './Components/ShowTemplate';
+import EmployeeInfo from './Components/EmployeeInfo';
 
 const App = () => {
 	const { activeStep } = useSelector((store) => store.stepper);
 	const renderForms = (activeStep) => {
 		switch (activeStep) {
-			// Task 6: Add employee info case here
-
-			// Task 9: Add employee work case here
-
-			// Task 11: Add employee education case here
-
-			// Task 13: Add employee skills case here
-
-			// Task 15: Add employee interests case here
-
+			case 0:
+				return <EmployeeInfo />;
 			default:
 				break;
 		}
@@ -30,6 +24,9 @@ const App = () => {
 					{' '}
 					<Grid item md={8} lg={8} sm={12}>
 						{renderForms(activeStep)}
+					</Grid>
+					<Grid item md={4} lg={4} sm={12} xs={12}>
+						<ShowTemplate />
 					</Grid>
 				</Grid>
 			) : (
