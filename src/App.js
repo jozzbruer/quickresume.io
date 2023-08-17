@@ -7,6 +7,7 @@ import EmployeeInfo from './Components/EmployeeInfo';
 import EmployeeExperience from './Components/EmployeeExperience';
 import EmployeeEducation from './Components/EmployeeEducation';
 import EmployeeSkills from './Components/EmployeeSkills';
+import EmployeeInterest from './Components/EmployeeInterest';
 
 const App = () => {
 	const { activeStep } = useSelector((store) => store.stepper);
@@ -20,6 +21,8 @@ const App = () => {
 				return <EmployeeEducation />;
 			case 3:
 				return <EmployeeSkills />;
+			case 4:
+				return <EmployeeInterest />;
 			default:
 				break;
 		}

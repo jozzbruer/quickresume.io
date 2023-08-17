@@ -4,6 +4,7 @@ import infoSlice from './features/info/infoSlice';
 import workSlice from './features/work/workSlice';
 import educationSlice from './features/education/educationSlice';
 import skillsSlice from './features/skills/skillsSlice';
+import interestsSlice from './features/interest/interestsSlice';
 
 export const store = configureStore({
 	reducer: {
@@ -11,7 +12,7 @@ export const store = configureStore({
 		work: workSlice,
 		education: educationSlice,
 		skills: skillsSlice,
-		// interests: interestsReducer,
+		interests: interestsSlice,
 		stepper: stepperSclice,
 	},
 	middleware: (getDefaultMiddleware) =>
