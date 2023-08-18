@@ -5,6 +5,7 @@ import { prevStep } from '../features/stepper/stepperSclice';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { FormatColorFill } from '@mui/icons-material';
+import { Email, Phone, LocationOn } from '@material-ui/icons';
 
 const Resume = () => {
 	const [sidebarBG, setSidebarBG] = useState('#3E4969');
@@ -130,9 +131,9 @@ const Resume = () => {
 			return (
 				<>
 					<span style={styles.jobTitle}>{experience.title}</span>
-					<div>
+					<div style={{ ...styles.dFlex, ...styles.spaceBetween }}>
 						<p>
-							{experience.organization}, {experience.country.label}
+							{experience.organization}, {experience.city}
 						</p>
 						<p>
 							{formatDate(experience.startDate)} –{' '}
@@ -181,7 +182,7 @@ const Resume = () => {
 								</h2>
 							</div>
 							<div style={styles.contactSection}>
-								<img style={styles.icons} src='envelope.png' alt='icon' />
+								<Email style={styles.icons} />
 								<p
 									style={{
 										...styles.profileContentColor,
@@ -192,7 +193,7 @@ const Resume = () => {
 									{/* populate email here */ info.email}
 								</p>
 
-								<img style={styles.icons} src='smartphone.png' alt='icon' />
+								<Phone style={styles.icons} />
 								<p
 									style={{
 										...styles.profileContentColor,
@@ -203,7 +204,7 @@ const Resume = () => {
 									{/* populate phone here */ info.phone}
 								</p>
 
-								<img style={styles.icons} src='location.png' alt='icon' />
+								<LocationOn style={styles.icons} />
 								<p
 									style={{
 										...styles.profileContentColor,
@@ -378,6 +379,7 @@ const Resume = () => {
 					<div className='dropdown-content'>
 						<a
 							href='#'
+							rel='noreferrer'
 							// call handleGeneratePdf function here
 							onClick={handleGeneratePdf}
 						>
@@ -385,6 +387,7 @@ const Resume = () => {
 						</a>
 						<a
 							href='#'
+							rel='noreferrer'
 							// call handleGeneratePng function here
 							onClick={handleGeneratePng}
 						>
