@@ -8,6 +8,7 @@ import EmployeeExperience from './Components/EmployeeExperience';
 import EmployeeEducation from './Components/EmployeeEducation';
 import EmployeeSkills from './Components/EmployeeSkills';
 import EmployeeInterest from './Components/EmployeeInterest';
+import Resume from './Components/Resume';
 
 const App = () => {
 	const { activeStep } = useSelector((store) => store.stepper);
@@ -42,7 +43,9 @@ const App = () => {
 					</Grid>
 				</Grid>
 			) : (
-				<Grid container></Grid>
+				<Grid container>
+					<Resume />
+				</Grid>
 			)}
 		</Container>
 	);
