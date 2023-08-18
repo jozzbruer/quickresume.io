@@ -9,7 +9,6 @@ const Header = () => {
 					<p>QUICKRESUME.IO</p>
 				</Box>
 			</Container>
-			;
 		</Box>
 	);
 };

@@ -16,12 +16,12 @@ const Footer = () => {
 						style={{ textDecoration: 'none', color: '#fff' }}
 						href='https://github.com/jozzbruer'
 						target='_blank'
+						rel='noreferrer'
 					>
 						Joz-Bruer Quince
 					</a>
 				</Box>
 			</Container>
-			;
 		</Box>
 	);
 };
