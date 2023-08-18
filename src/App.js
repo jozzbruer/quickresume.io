@@ -9,6 +9,8 @@ import EmployeeEducation from './Components/EmployeeEducation';
 import EmployeeSkills from './Components/EmployeeSkills';
 import EmployeeInterest from './Components/EmployeeInterest';
 import Resume from './Components/Resume';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 const App = () => {
 	const { activeStep } = useSelector((store) => store.stepper);
@@ -30,24 +32,28 @@ const App = () => {
 	};
 
 	return (
-		<Container label={'margin:"none"'} sx={{ mt: 10, mb: 10 }}>
-			<MultiStepper sx={{ mt: 6 }} />
-			{activeStep < 5 ? (
-				<Grid>
-					{' '}
-					<Grid item md={8} lg={8} sm={12}>
-						{renderForms(activeStep)}
+		<>
+			<Header />
+			<Container label={'margin:"none"'} sx={{ mt: 10, mb: 10 }}>
+				<MultiStepper sx={{ mt: 6 }} />
+				{activeStep < 5 ? (
+					<Grid>
+						{' '}
+						<Grid item md={8} lg={8} sm={12}>
+							{renderForms(activeStep)}
+						</Grid>
+						<Grid item md={4} lg={4} sm={12} xs={12}>
+							<ShowTemplate />
+						</Grid>
 					</Grid>
-					<Grid item md={4} lg={4} sm={12} xs={12}>
-						<ShowTemplate />
+				) : (
+					<Grid container>
+						<Resume />
 					</Grid>
-				</Grid>
-			) : (
-				<Grid container>
-					<Resume />
-				</Grid>
-			)}
-		</Container>
+				)}
+			</Container>
+			<Footer />
+		</>
 	);
 };
 
