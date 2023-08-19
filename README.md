@@ -2,6 +2,8 @@
 
 QuickResume.io is a web application built using React.js, Material-UI, and Redux that allows users to easily create and generate professional-looking resumes in PDF or PNG format. With QuickResume.io, you can input your personal information, work experience, education details, skills, and more, and then download your resume for printing or sharing digitally.
 
+![Quickresume io](https://github.com/jozzbruer/quickresume.io/assets/21253158/769a0f4f-dccd-4ce6-b30a-e4b471441ea9)
+
 ## Features
 
 - **User-Friendly Interface:** QuickResume.io offers an intuitive and user-friendly interface that makes it easy for users to enter their information and customize their resume.
@@ -23,7 +25,7 @@ QuickResume.io is a web application built using React.js, Material-UI, and Redux
 1. Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/quickresume.io.git
+   git clone https://github.com/jozzbruer/quickresume.io.git
    ```
 
 2. Navigate to the project directory.
