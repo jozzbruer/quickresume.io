@@ -2,6 +2,7 @@ import { Box, Step, StepLabel, Stepper } from '@mui/material';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { jumpToStep } from '../features/stepper/stepperSclice';
+import '../css/style.css';
 
 const MultiStepper = () => {
 	const { steps, activeStep, header } = useSelector((store) => store.stepper);
