@@ -34,7 +34,11 @@ const App = () => {
 	return (
 		<>
 			<Header />
-			<Container label={'margin:"none"'} sx={{ mt: 10, mb: 10 }}>
+			<Container
+				style={{ minHeight: '600px' }}
+				label={'margin:"none"'}
+				sx={{ mt: 10, mb: 10 }}
+			>
 				<MultiStepper sx={{ mt: 6 }} />
 				{activeStep < 5 ? (
 					<Grid>
