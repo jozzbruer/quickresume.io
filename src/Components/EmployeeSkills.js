@@ -33,7 +33,7 @@ const EmployeeSkills = () => {
 			<InputLabel className='text-input'>Skills</InputLabel>
 			<TagsInput
 				rows={3}
-				placeHolder='e.g Proficient in C++'
+				placeHolder='e.g Proficient in C++, Press Enter to add'
 				onChange={(value) => {
 					formik.setFieldValue('skills', value);
 				}}
